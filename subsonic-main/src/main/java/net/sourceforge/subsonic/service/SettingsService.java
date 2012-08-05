@@ -248,7 +248,8 @@ public class SettingsService {
      */
     public void init() {
         ServiceLocator.setSettingsService(this);
-        validateLicenseAsync();
+        // skip license validation
+        // validateLicenseAsync();
     }
 
     public void save() {
