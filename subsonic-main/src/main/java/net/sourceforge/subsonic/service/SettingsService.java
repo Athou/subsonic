@@ -621,7 +621,7 @@ public class SettingsService {
     }
 
     public boolean isLicenseValid() {
-        return isLicenseValid(getLicenseEmail(), getLicenseCode()) && licenseValidated;
+        return true;
     }
 
     public boolean isLicenseValid(String email, String license) {
