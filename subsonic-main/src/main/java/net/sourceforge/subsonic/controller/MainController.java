@@ -72,6 +72,8 @@ public class MainController extends ParameterizableViewController {
         }
 
         MediaFile dir = mediaFiles.get(0);
+        map.put("autoplay", dir.isFile());
+        map.put("autoplayFile", dir.getId());
         if (dir.isFile()) {
             dir = mediaFileService.getParentOf(dir);
         }

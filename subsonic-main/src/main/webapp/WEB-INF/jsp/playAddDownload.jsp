@@ -62,3 +62,13 @@ PARAMETERS
         <img src="<spring:theme code="downloadImage"/>" alt="<fmt:message key="common.download"/>" title="<fmt:message key="common.download"/>"></a>
 </c:if>
 <c:if test="${param.asTable}"></td></c:if>
+
+<sub:url value="/index.view" var="linkUrl">
+    <sub:param name="id" value="${param.id}"/>
+</sub:url>
+<c:if test="${param.asTable}"><td></c:if>
+<a href="${linkUrl}" target="_blank">
+    <img src="<spring:theme code="forwardImage"/>" alt="Link" title="Link"></a>
+<c:if test="${param.asTable}"></td></c:if>
+
+

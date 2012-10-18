@@ -186,6 +186,10 @@ public class MultiController extends MultiActionController {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("showRight", userSettings.isShowNowPlayingEnabled() || userSettings.isShowChatEnabled());
         map.put("brand", settingsService.getBrand());
+        
+        String id = request.getParameter("id");
+        map.put("page", id == null ? "nowPlaying.view?" : "main.view?id=" + id);
+        
         return new ModelAndView("index", "model", map);
     }
 

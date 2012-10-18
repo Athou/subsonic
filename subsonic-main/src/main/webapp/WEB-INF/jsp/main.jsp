@@ -36,6 +36,10 @@
                     $(this).dialog("close");
                 }
             }});
+        
+    	if(${model.autoplay}){
+    		setTimeout("top.playQueue.onPlay(${model.autoplayFile})", 3000);
+    	}
     }
 
     <!-- actionSelected() is invoked when the users selects from the "More actions..." combo box. -->
@@ -118,7 +122,7 @@
             $().toastmessage("showSuccessToast", "<fmt:message key="playlist.toast.appendtoplaylist"/>");
         });
     }
-
+    
 </script>
 
 <c:if test="${model.updateNowPlaying}">
