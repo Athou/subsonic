@@ -64,6 +64,8 @@ public class TopController extends ParameterizableViewController {
             map.put("newVersionAvailable", true);
             map.put("latestVersion", versionService.getLatestBetaVersion());
         }
+		
+		map.remove("newVersionAvailable");
 
         ModelAndView result = super.handleRequestInternal(request, response);
         result.addObject("model", map);
