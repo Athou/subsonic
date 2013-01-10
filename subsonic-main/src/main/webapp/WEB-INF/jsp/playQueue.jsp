@@ -71,7 +71,8 @@
         var flashvars = {
             backcolor:"<spring:theme code="backgroundColor"/>",
             frontcolor:"<spring:theme code="textColor"/>",
-            id:"player1"
+            id:"player1",
+            skin:"<c:url value="/flash/modieus.swf"/>"
         };
         var params = {
             allowfullscreen:"true",
@@ -81,7 +82,7 @@
             id:"player1",
             name:"player1"
         };
-        swfobject.embedSWF("<c:url value="/flash/jw-player-5.6.swf"/>", "placeholder", "340", "24", "9.0.0", false, flashvars, params, attributes);
+        swfobject.embedSWF("<c:url value="/flash/jw-player-5.6.swf"/>", "placeholder", "340", "32", "9.0.0", false, flashvars, params, attributes);
     }
 
     function playerReady(thePlayer) {
@@ -470,7 +471,7 @@
                 </select></td>
             </c:if>
             <c:if test="${model.player.web}">
-                <td style="width:340px; height:24px;padding-left:10px;padding-right:10px"><div id="placeholder">
+                <td style="width:340px; height:32px;padding-left:10px;padding-right:10px"><div id="placeholder">
                     <a href="http://www.adobe.com/go/getflashplayer" target="_blank"><fmt:message key="playlist.getflash"/></a>
                 </div></td>
             </c:if>
